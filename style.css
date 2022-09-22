@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Title {
+  font-size: 25px;
+  color: rgb(207, 209, 210);
+  margin-top: 15px;
+}
+
+.slider-value{
+  position: relative;
+  left: 210px;
+  bottom: 2px;
+}
+
+
+.test {
+  display: flex;
+  width: auto;
+  height: 1vh auto;
+  background: black;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ font-size: 30px;
+ color: white;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 400px;
+  height: 10px;
+  border-radius: 5px;  
+  background-color: rgb(164,255,175);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-left: 20px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+
+
+.mainbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(36,35,43);
+  align-items: center;
+  width: 450px;
+  height: 400px; 
+  margin-top: -40px;
+}
+
+.kod {
+  height: 65px;
+  width: 450px;
+  background-color: rgb(36,35,43);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.generator {
+  height: 58px;
+  width: 400px;
+  font-size: 30px;
+  background-color: rgb(164,255,175);
+  border: none;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+.strength {
+  height: 58px;
+  width: 400px;
+  background-color: rgb(35, 31, 31);
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+
+}
+
+
+
+.charlength {
+  font-size: 20px;
+}
+
+.checkboxdiv {
+  margin-right: 120px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-left: 20px;
+}
+
+.slidecontainer {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.charlength {
+  margin-left: 20px;
+}
+
+.checkin {
+  accent-color: rgb(164,255,175);
+  cursor: pointer;
+}
+
+.copybutton{
+  cursor: pointer;
+  width: 60px;
+  height: 40px;
+}
+
+.copy-div {
+  position: relative;
+  left: 190px;
+  top: -52px;
+}
+
+.generator:hover{
+  background-color:rgb(194, 252, 184);
+  transition: background-color .2s;
+}
+
+.generator:active{
+  box-shadow: 2px -10px 70px -14px rgba(0,0,0,0.24) inset;
+  transition: box-shadow .1s;
+
+}

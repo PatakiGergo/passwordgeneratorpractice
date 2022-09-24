@@ -14,6 +14,15 @@ const strength = document.querySelector('.strength')
 let lengthslider = document.querySelector('.slider')
 let slideroutput = document.querySelector('.slider-value')
 const copybutton = document.querySelector('.copybutton')
+const timerSecond = document.querySelector('.seconds')
+const timerdiv = document.querySelector('.counter')
+const ownCharButton = document.querySelector('.own')
+const doboz = document.querySelector('.checkboxdiv')
+const addOwnText = document.querySelector('.text')
+
+
+
+
 
 const copying = function(){
     copytext = placeholder.textContent
@@ -22,10 +31,14 @@ const copying = function(){
 
 copybutton.addEventListener('click', copying)
 
+
 slideroutput.innerHTML = lengthslider.value;
+
+
 
 lengthslider.oninput = function() {
     slideroutput.innerHTML = this.value;
+    this.style.background = `linear-gradient(to right, #a4ffaf 0%, #a4ffaf ${(this.value-this.min)/(this.max-this.min)*100}%, #DEE2E6 ${(this.value-this.min)/(this.max-this.min)*100}%, #DEE2E6 100%)`
 
 }
 
@@ -34,8 +47,15 @@ let strengthCalculator = 0;
 upperselector.checked = true
 lowerselector.checked = true
 
+
+
+
+
+
 const generate = function() {
     let passwordlength = lengthslider.value
+    time = 11;
+    timerdiv.style.opacity = 100;
 
 
     if (upperselector.checked){
@@ -79,10 +99,31 @@ const generate = function() {
         strength.textContent = 'Waiting for input'
         placeholder.textContent = 'Please select inputs'
     }
-
    }
 }
 
+let time;
+
+const generatingTimer = function(){
+    time= 10;
+    setInterval(function(){
+        time--
+        timerSecond.textContent = time;
+        if(time === 0){
+            generate()
+            time = 11;
+            
+        }
+
+    },1000)
+    
+    
+}
+
+
+
+
 let generalas = document.querySelector('.generator').addEventListener('click', generate)
+let resetting = document.querySelector('.generator').addEventListener('click', generatingTimer())
 
 

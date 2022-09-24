@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    
-    
-</head>
-<body class="test">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="test">
     <div class="Title">Password Generator</div>
+    <div class="counter">Generating new password in: <span class="seconds">10</span> seconds</div>
     <div></div>
     <div class="kod">
-        <span class="generated-code">
-            Your password
-        </span>
+      <span class="generated-code"> Your password </span>
     </div>
     <div class="copy-div">
-        <img src="copyicon.png" alt="" class="copybutton">
+      <img src="copyicon.png" alt="" class="copybutton" />
     </div>
     <div class="mainbox">
-    <div class="slidecontainer">
-        <div class="charlength">Password Length <span class="slider-value">4</span></div>
-        <input type="range" min="4" max="16"class="slider" id="myRange">
+      <div class="slidecontainer">
+        <div class="charlength">
+          Password Length <span class="slider-value">4</span>
         </div>
-    <div class="checkboxdiv">
-        <div><input type="checkbox" class="gombup checkin"> Include Uppercase Letters</div>
-        <div><input type="checkbox" class="gomblow checkin"> Include Lowercase Letters</div>
-        <div><input type="checkbox" class="gombnum checkin"> Include Numbers</div>
-        <div><input type="checkbox" class="gombspec checkin"> Include Symbols</div>
+        <input type="range" min="4" max="16" class="slider" id="myRange" />
+      </div>
+      <div class="checkboxdiv">
+        <div>
+          <input type="checkbox" class="gombup checkin" /> Include Uppercase
+          Letters
+        </div>
+        <div>
+          <input type="checkbox" class="gomblow checkin" /> Include Lowercase
+          Letters
+        </div>
+        <div>
+          <input type="checkbox" class="gombnum checkin" /> Include Numbers
+        </div>
+        <div>
+          <input type="checkbox" class="gombspec checkin"/> Include Symbols
+        </div>
+        <div><input type="checkbox" class="own checkin" ><span class="text">Add my own letter(soon)</span>
+        
+        </div>
+          
     </div>
 
-    <div class="strength">
-        Press the button to generate
-    </div>
-    
+    <div class="strength">Press the button to generate</div>
+
     <div class="gombdiv">
-        <button class="generator">Generate</button>
+      <button class="generator">Generate</button>
     </div>
-    
 
     <script src="gyak.js"></script>
-</body>
+  </body>
 </html>

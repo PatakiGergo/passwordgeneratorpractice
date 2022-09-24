@@ -19,9 +19,18 @@ const timerdiv = document.querySelector('.counter')
 const ownCharButton = document.querySelector('.own')
 const doboz = document.querySelector('.checkboxdiv')
 const addOwnText = document.querySelector('.text')
+const ownlettersdiv = document.querySelector('.myownletters')
+const textbox = document.querySelector('.textbox')
 
 
 
+ownCharButton.addEventListener('change', function(){
+    if(ownlettersdiv.classList.contains('hidden')){
+        ownlettersdiv.classList.remove('hidden')
+    } else {
+        ownlettersdiv.classList.add('hidden')
+    }
+} )
 
 
 const copying = function(){
@@ -81,7 +90,11 @@ const generate = function() {
     for(i = 0; i < passwordlength; i++) {
         password.push(letters[Math.floor(Math.random() * letters.length)])
     }
-   placeholder.textContent = password.join('')
+
+    let usertextinput = textbox.value
+    password.unshift(usertextinput)
+    password.slice(0, passwordlength)
+   placeholder.textContent = password.join('').slice(0, passwordlength)
    password = [];
    letters= '';
 
